@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muestra de juegos MakeCode | Nombre del Colegio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ================= BARRA DE NAVEGACIÓN ================= -->
+  <header class="header">
+    <div class="contenedor header-inner">
+      <a class="marca" href="#inicio">
+        <img src="img/logo.png" alt="" class="marca-logo">
+        <span>Perpetuo Socorro Madre Ana</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav">☰ Menú</button>
+
+      <nav class="nav" id="nav" aria-label="Secciones">
+        <ul>
+          <li><a href="#plataformas">Juegos de plataformas 2D</a></li>
+          <li><a href="#laberintos">Laberintos</a></li>
+          <li><a href="#historias">Historias interactivas en MakeCode</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= PORTADA ================= -->
+    <section class="portada" id="inicio">
+      <div class="contenedor">
+        <p class="portada-etiqueta">Muestra de proyectos</p>
+        <h1>Juegos creados en MakeCode Arcade</h1>
+        <p class="portada-texto">Conocé los juegos que diseñaron y programaron nuestros estudiantes.</p>
+      </div>
+    </section>
+
+    <!-- ================= JUEGOS DE PLATAFORMAS 2D ================= -->
+    <section class="seccion seccion-plataformas" id="plataformas" aria-labelledby="titulo-plataformas">
+      <div class="contenedor">
+
+        <div class="seccion-cabecera">
+          <div class="seccion-texto">
+            <p class="seccion-numero">01</p>
+            <h2 id="titulo-plataformas">Juegos de plataformas 2D</h2>
+            <p class="seccion-desc">Saltos, enemigos y niveles: juegos donde el personaje corre y salta de plataforma en plataforma.</p>
+          </div>
+          <!-- GIF que representa la sección -->
+          <img class="seccion-gif" src="img/secciones/plataforma.gif" alt="Ejemplo de juegos de plataformas 2d">
+        </div>
+
+        <!-- Para agregar un juego, copia un <article class="juego"> completo
+             y cambia la imagen, el nombre y los integrantes. -->
+        <div class="juegos">
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/plataformas/Pepe.JPG" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S55031-49462-17851-24673" target="_blank" rel="noopener">PepeMistery2</a></h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Thiago Apikian</li>
+                <li>Nahuel Medina</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/plataformas/arcade-ferran-torres (1).png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S45696-50885-23519-92672" target="_blank" rel="noopener">Ferran Torres</a></h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Mia Piñeiro</li>
+                <li>Joaquin Espinosa</li>
+                <li>Fiorella Carraro</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/plataformas/arcade-Maze.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S76070-97677-86890-92008" target="_blank" rel="noopener">Maze</a></h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Agustin Castro</li>
+                <li>Juan Capraro</li>
+                <li>Camilo Chiesa</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/plataformas/arcade-Monkey-plataforma.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S74815-73080-65688-24234" target="_blank" rel="noopener">Monkey plataforma</a></h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Luna Morena Martin</li>
+              </ul>
+            </div>
+          </article>
+
+
+        <article class="juego">
+            <img class="juego-img" src="img/juegos/plataformas/Susana.JPG" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S05898-09415-34394-05706" target="_blank" rel="noopener">Susana</a></h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Mateo Tambucho</li>
+                <li>Bruno rocha</li>
+                <li>Benjamín silva</li>
+              </ul>
+            </div>
+          </article>
+
+
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/plataformas/arcade-Mama-Soy-un-Angry-Bird-el-VideoJuego (1).png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S13988-37290-89998-15745" target="_blank" rel="noopener">Mama soy un Angry Bird</a></h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Elian Silva</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= LABERINTOS ================= -->
+    <section class="seccion seccion-laberintos" id="laberintos" aria-labelledby="titulo-laberintos">
+      <div class="contenedor">
+
+        <div class="seccion-cabecera">
+          <div class="seccion-texto">
+            <p class="seccion-numero">02</p>
+            <h2 id="titulo-laberintos">Laberintos</h2>
+            <p class="seccion-desc">Juegos donde hay que encontrar la salida, esquivar obstáculos y resolver el recorrido.</p>
+          </div>
+          <!-- GIF que representa la sección -->
+          <img class="seccion-gif" src="img/secciones/maze-game.gif" alt="Ejemplo de laberintos">
+        </div>
+
+        <!-- Para agregar un juego, copia un <article class="juego"> completo
+             y cambia la imagen, el nombre y los integrantes. -->
+        <div class="juegos">
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/laberintos/arcade-pepemistery.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S20739-22327-09827-48594" target="_blank" rel="noopener">PepeMistery</a></h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Thiago Apikian</li>
+                <li>Nahuel Medina</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/laberintos/arcade-laberinto-del-vini-el-mono (1).png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S69112-67083-62523-01652" target="_blank" rel="noopener"></a>Vini el mono</h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Mia Piñeiro</li>
+                <li>Joaquin Espinosa</li>
+                <li>Fiorella Carraro</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/laberintos/Princesa perdida.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S83307-46212-67205-39375" target="_blank" rel="noopener"></a>Princesa Perdida</h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Luna Morena</li>
+              </ul>
+            </div>
+          </article>
+
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/laberintos/Pepe lab.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S41783-72924-21191-34691" target="_blank" rel="noopener"></a>El laberinto de Bolita</h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Agustin Castro</li>
+                <li>Juan Capraro</li>
+                <li>Camilo Chiesa</li>
+              </ul>
+            </div>
+          </article>
+
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/laberintos/bolita.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/78841-06962-24885-30486" target="_blank" rel="noopener"></a>El laberinto de Pancho</h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Elian Silva</li>
+              </ul>
+            </div>
+          </article>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= HISTORIAS INTERACTIVAS EN MAKECODE ================= -->
+    <section class="seccion seccion-historias" id="historias" aria-labelledby="titulo-historias">
+      <div class="contenedor">
+
+        <div class="seccion-cabecera">
+          <div class="seccion-texto">
+            <p class="seccion-numero">03</p>
+            <h2 id="titulo-historias">Historias interactivas en MakeCode</h2>
+            <p class="seccion-desc">Relatos donde el jugador toma decisiones y la historia cambia según lo que elige.</p>
+          </div>
+          <!-- GIF que representa la sección -->
+          <img class="seccion-gif" src="img/secciones/historia.gif" alt="Ejemplo de historias interactivas en makecode">
+        </div>
+
+        <!-- Para agregar un juego, copia un <article class="juego"> completo
+             y cambia la imagen, el nombre y los integrantes. -->
+        <div class="juegos">
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/historias/Pepe rescatando a la princesa.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/85632-16177-41438-01442" target="_blank" rel="noopener"></a>Pepe rescatando la Princesa</h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Nahuel Medina</li>
+                <li>Lautaro Salaberri</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/historias/clase.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S56792-33546-19733-50644" target="_blank" rel="noopener"></a>Siempre pedir ayuda</h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Mateo Tambucho</li>
+                <li>Bruno rocha</li>
+                <li>Benjamín silva</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="juego">
+            <img class="juego-img" src="img/juegos/historias/Nunca renidrse.png" alt="Captura del juego">
+            <div class="juego-info">
+              <h3 class="juego-nombre"><a href="https://arcade.makecode.com/S83905-79367-34201-17486" target="_blank" rel="noopener"></a>Nunca renidrse</h3>
+              <ul class="juego-integrantes" aria-label="Integrantes">
+                <li>Elian Silva</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <p>Perpetuo Socorro Madre Ana · Muestra de juegos MakeCode</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+/* =========================================
+   Muestra de juegos MakeCode — estilos
+   ========================================= */
+
+/* ====== Variables ====== */
+:root {
+  --fondo: #0f1226;
+  --fondo-alt: #151936;
+  --tarjeta: #1d2246;
+  --texto: #eef0ff;
+  --texto-suave: #b4b9e0;
+
+  /* color de acento de cada sección */
+  --verde: #3fd16b;    /* plataformas */
+  --violeta: #9a7dff;  /* laberintos */
+  --naranja: #ff9f43;  /* historias */
+
+  --alto-header: 72px;
+  --ancho-max: 1200px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --fuente-pixel: "Press Start 2P", monospace;
+  --fuente-texto: "Rubik", system-ui, sans-serif;
+}
+
+/* ====== Base ====== */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;  /* desplazamiento suave al hacer clic en el menú */
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+.contenedor {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ====== Barra de navegación (queda fija arriba) ====== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(15, 18, 38, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 3px solid #2a3060;
+}
+
+.header-inner {
+  min-height: var(--alto-header);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--texto);
+  text-decoration: none;
+  font-family: var(--fuente-pixel);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.marca-logo {
+  height: 44px;
+  width: auto;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav a {
+  display: block;
+  padding: 10px 14px;
+  border: 2px solid #2f3670;
+  border-radius: 8px;
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  border-color: var(--texto-suave);
+}
+
+/* enlace de la sección que se está viendo (lo marca el JS) */
+.nav a[href="#plataformas"].activo { background: var(--verde);   border-color: var(--verde);   color: #0b1a10; }
+.nav a[href="#laberintos"].activo  { background: var(--violeta); border-color: var(--violeta); color: #140c2e; }
+.nav a[href="#historias"].activo   { background: var(--naranja); border-color: var(--naranja); color: #2a1500; }
+
+.menu-toggle {
+  display: none;
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 14px;
+  background: transparent;
+  color: var(--texto);
+  border: 2px solid #2f3670;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ====== Portada ====== */
+.portada {
+  padding: clamp(60px, 12vw, 140px) 0 clamp(50px, 9vw, 110px);
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(63, 209, 107, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(154, 125, 255, 0.18), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(255, 159, 67, 0.14), transparent 50%);
+}
+
+.portada-etiqueta {
+  margin: 0 0 16px;
+  color: var(--texto-suave);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.portada h1 {
+  margin: 0 auto;
+  max-width: 18ch;
+  font-family: var(--fuente-pixel);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 4.5vw, 3rem);
+  line-height: 1.4;
+}
+
+.portada-texto {
+  margin: 24px auto 0;
+  max-width: 50ch;
+  color: var(--texto-suave);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* ====== Secciones ====== */
+.seccion {
+  padding: clamp(56px, 9vw, 110px) 0;
+  /* al saltar desde el menú, la sección no queda tapada por la barra fija */
+  scroll-margin-top: calc(var(--alto-header) + 3px);
+}
+
+.seccion:nth-of-type(even) { background: var(--fondo-alt); }
+
+/* cada sección define su color de acento */
+.seccion-plataformas { --acento: var(--verde); }
+.seccion-laberintos  { --acento: var(--violeta); }
+.seccion-historias   { --acento: var(--naranja); }
+
+.seccion-cabecera {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+.seccion-numero {
+  margin: 0 0 12px;
+  font-family: var(--fuente-pixel);
+  font-size: 14px;
+  color: var(--acento);
+}
+
+.seccion h2 {
+  margin: 0;
+  font-family: var(--fuente-pixel);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 3vw, 2rem);
+  line-height: 1.5;
+  color: var(--acento);
+}
+
+.seccion-desc {
+  margin: 20px 0 0;
+  color: var(--texto-suave);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  max-width: 45ch;
+}
+
+/* GIF que representa la sección */
+.seccion-gif {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 4px solid var(--acento);
+  border-radius: 12px;
+  box-shadow: 8px 8px 0 #000;
+  background: #000;
+}
+
+/* ====== Tarjetas de juegos ====== */
+.juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: clamp(20px, 3vw, 32px);
+}
+
+.juego {
+  background: var(--tarjeta);
+  border: 3px solid #2f3670;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.juego:hover {
+  transform: translateY(-4px);
+  border-color: var(--acento);
+  box-shadow: 6px 6px 0 #000;
+}
+
+/* recorte de imagen del juego */
+.juego-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #000;
+}
+
+/* abajo: nombre a la izquierda, integrantes a la derecha */
+.juego-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px 16px;
+  padding: 16px 18px 18px;
+  border-top: 3px solid var(--acento);
+}
+
+.juego-nombre {
+  flex: 1 1 140px;
+  margin: 0;
+  font-family: var(--fuente-pixel);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--acento);
+}
+
+
+
+.juego-integrantes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  color: var(--texto-suave);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ====== Pie ====== */
+.footer {
+  padding: 32px 0;
+  border-top: 3px solid #2a3060;
+  color: var(--texto-suave);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ====== Tablet y celular ====== */
+@media (max-width: 860px) {
+  .seccion-cabecera { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .menu-toggle { display: block; }
+  .nav { flex-basis: 100%; display: none; padding-bottom: 14px; }
+  .nav.open { display: block; }
+  .nav ul { flex-direction: column; }
+  .nav a { text-align: center; }
+}
+
+/* ====== Menos movimiento si el usuario lo pide ====== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .juego, .nav a { transition: none; }
+  .juego:hover { transform: none; }
+}
+
+/* ====== Enlace del juego ====== */
+.juego {
+  position: relative; /* para que el enlace pueda cubrir toda la caja */
+}
+
+.juego-nombre a {
+  color: inherit;          /* toma el color de la sección, no el azul del navegador */
+  text-decoration: none;
+  /* subrayado que crece de izquierda a derecha */
+  background: linear-gradient(currentColor, currentColor) left bottom / 0 3px no-repeat;
+  padding-bottom: 4px;
+  transition: background-size 0.3s ease, color 0.2s ease;
+}
+
+/* el enlace se estira invisible sobre toda la caja: se puede hacer clic en cualquier parte */
+.juego-nombre a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* flechita que aparece al lado del nombre */
+.juego-nombre::after {
+  content: "▶";
+  display: inline-block;
+  margin-left: 8px;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* efecto al pasar el mouse por la caja o al llegar con el teclado */
+.juego:hover .juego-nombre a,
+.juego:focus-within .juego-nombre a {
+  color: #fff;
+  background-size: 100% 3px;
+}
+
+.juego:hover .juego-nombre::after,
+.juego:focus-within .juego-nombre::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.juego:focus-within {
+  border-color: var(--acento);
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.juego-nombre a:focus-visible { outline: none; } /* el contorno lo muestra la caja */
